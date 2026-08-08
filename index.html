@@ -1,0 +1,64 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Daily Ledger — Todo App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class="page">
+  <div class="holes">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="margin-rule"></div>
+ 
+  <div class="sheet">
+    <header>
+      <p class="eyebrow">Ex.03 — Todo Application</p>
+      <h1>The Daily Ledger</h1>
+      <p class="subtitle">Write it down, cross it off. Everything saves automatically on this device.</p>
+      <p class="date-today" id="todayDate"></p>
+    </header>
+ 
+    <div class="add-row">
+      <input type="text" id="taskInput" placeholder="What needs doing?" maxlength="140" autocomplete="off">
+      <button class="add-btn" id="addBtn">+ ADD</button>
+    </div>
+    <div class="add-row2">
+      <select id="prioritySelect" aria-label="Priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <input type="date" id="dueInput" aria-label="Due date">
+    </div>
+ 
+    <div class="toolbar">
+      <div class="filters" id="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="done">Done</button>
+      </div>
+      <span class="count" id="countLabel">0 items left</span>
+    </div>
+ 
+    <ul id="list"></ul>
+    <div class="empty-state" id="emptyState" style="display:none;">Nothing on the page yet — add your first task above.</div>
+ 
+    <footer class="app-footer">
+      <button class="clear-btn" id="clearDone">Clear completed</button>
+      <div class="credit">
+        <b>Lokesh.K</b><br>
+        Register No: 2122252240080
+      </div>
+    </footer>
+  </div>
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
